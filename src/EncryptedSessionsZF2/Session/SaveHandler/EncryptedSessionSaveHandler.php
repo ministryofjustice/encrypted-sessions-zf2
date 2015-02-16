@@ -26,14 +26,6 @@ class EncryptedSessionSaveHandler implements SaveHandlerInterface
      */
     protected $decryptFilter;
 
-
-    /**
-     * Constructor
-     *
-     * @param SaveHandlerInterface $sessionSaveHandler
-     * @param Encrypt $encryptFilter
-     * @param Decrypt $decryptFilter
-     */
     public function __construct(
         SaveHandlerInterface $sessionSaveHandler,
         Encrypt $encryptFilter,
@@ -45,10 +37,7 @@ class EncryptedSessionSaveHandler implements SaveHandlerInterface
     }
 
     /**
-     * Open Session - retrieve resources
-     *
-     * @param string $savePath
-     * @param string $name
+     * {@inheritdoc}
      */
     public function open($savePath, $name)
     {
@@ -56,8 +45,7 @@ class EncryptedSessionSaveHandler implements SaveHandlerInterface
     }
 
     /**
-     * Close Session - free resources
-     *
+     * {@inheritdoc}
      */
     public function close()
     {
@@ -65,11 +53,7 @@ class EncryptedSessionSaveHandler implements SaveHandlerInterface
     }
 
     /**
-     * Read session data
-     *
-     * @param string $id
-     *
-     * @return mixed $data
+     * {@inheritdoc}
      */
     public function read($id)
     {
@@ -86,10 +70,7 @@ class EncryptedSessionSaveHandler implements SaveHandlerInterface
     }
 
     /**
-     * Write Session - commit data to resource
-     *
-     * @param string $id
-     * @param mixed $data
+     * {@inheritdoc}
      */
     public function write($id, $data)
     {
@@ -104,10 +85,7 @@ class EncryptedSessionSaveHandler implements SaveHandlerInterface
     }
 
     /**
-     * Destroy Session - remove data from resource for
-     * given session id
-     *
-     * @param string $id
+     * {@inheritdoc}
      */
     public function destroy($id)
     {
@@ -115,10 +93,7 @@ class EncryptedSessionSaveHandler implements SaveHandlerInterface
     }
 
     /**
-     * Garbage Collection - remove old session data older
-     * than $maxlifetime (in seconds)
-     *
-     * @param int $maxlifetime
+     * {@inheritdoc}
      */
     public function gc($maxlifetime)
     {
