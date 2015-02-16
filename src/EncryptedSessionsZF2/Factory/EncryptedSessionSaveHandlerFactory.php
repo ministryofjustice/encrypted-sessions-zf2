@@ -27,9 +27,9 @@ class EncryptedSessionSaveHandlerFactory implements FactoryInterface
         $config = $serviceManager->get('Config');
 
         if (!isset($config['encrypted_sessions_zf2'])) {
-            throw new RuntimeException('Have you copied
-             "config/encrypted_sessions_zf2.local.php.dist" into your
-             project (without the .dist extension)?');
+            throw new RuntimeException('Have you copied '.
+             '"config/encrypted_sessions_zf2.local.php.dist" into your '.
+             'project (without the .dist extension)?');
         }
 
         // To support encryption of Zend Framework's default Session Save Handler
