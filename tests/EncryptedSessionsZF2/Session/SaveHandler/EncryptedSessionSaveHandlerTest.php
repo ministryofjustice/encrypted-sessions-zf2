@@ -85,7 +85,7 @@ class EncryptedSessionSaveHandlerTest extends PHPUnit_Framework_TestCase
     /**
      * @covers EncryptedSessionsZF2\Session\SaveHandler\EncryptedSessionSaveHandler::read
      */
-    public function testEncryptedSessionSaveHandlerEmptyReadReturnsEmpty()
+    public function testEncryptedSessionSaveHandlerEmptyReadFromBackingMethodReturnsEmpty()
     {
         $this->mockSessionSaveHandler->expects($this->once())
             ->method('read')
@@ -103,7 +103,7 @@ class EncryptedSessionSaveHandlerTest extends PHPUnit_Framework_TestCase
     /**
      * @covers EncryptedSessionsZF2\Session\SaveHandler\EncryptedSessionSaveHandler::read
      */
-    public function testEncryptedSessionSaveHandlerFalseReadReturnsFalse()
+    public function testEncryptedSessionSaveHandlerFalseReadFromBackingMethodReturnsFalse()
     {
         $this->mockSessionSaveHandler->expects($this->once())
             ->method('read')
@@ -141,7 +141,7 @@ class EncryptedSessionSaveHandlerTest extends PHPUnit_Framework_TestCase
     /**
      * @covers EncryptedSessionsZF2\Session\SaveHandler\EncryptedSessionSaveHandler::write
      */
-    public function testEncryptedSessionSaveHandlerEmptyWriteReturnsEmpty()
+    public function testEncryptedSessionSaveHandlerEmptyWriteToBackingMethodReturnsEmpty()
     {
         $this->mockSessionSaveHandler->expects($this->never())
             ->method('write');
@@ -157,7 +157,7 @@ class EncryptedSessionSaveHandlerTest extends PHPUnit_Framework_TestCase
     /**
      * @covers EncryptedSessionsZF2\Session\SaveHandler\EncryptedSessionSaveHandler::write
      */
-    public function testEncryptedSessionSaveHandlerEmptyWriteReturnsFalse()
+    public function testEncryptedSessionSaveHandlerEmptyWriteFromBackingMethodReturnsFalse()
     {
         $this->mockSessionSaveHandler->expects($this->never())
             ->method('write');
