@@ -1,0 +1,24 @@
+<?php
+
+/*
+ * This contains configuration for the ZF2 Encrypted Session module.
+ * Place this file in `$PROJECT_ROOT/config/autoload` (don't forget to remove
+ * the .dist extension). Change it however you need for your project.
+ */
+
+return array(
+    'encrypted_sessions_zf2' => array(
+        'session' => array(
+            // The service that the encryption service decorates.
+            // Must be a service that implements Zend\Session\SaveHandler\SaveHandlerInterface.
+            // Specifying 'null' uses default PHP Session Save Handler.
+            'save_handler' => null,
+            // The the service that handles session encryption.
+            // Must be of type Zend\Filter\Encrypt.
+            'encryption_handler' => 'Zend\Filter\Encrypt',
+            // The the service that handles session decryption.
+            // Must be of type Zend\Filter\Decrypt.
+            'decryption_handler' => 'Zend\Filter\Decrypt',
+        ),
+    )
+);
