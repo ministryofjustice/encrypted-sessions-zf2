@@ -4,9 +4,6 @@ namespace EncryptedSessionsZF2;
 
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
-/**
- * Zend Framework 2 module that allows easy consumption of the AWS SDK for PHP
- */
 class Module implements ConfigProviderInterface
 {
     /**
