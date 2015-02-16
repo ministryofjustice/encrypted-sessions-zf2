@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit>
+
+    <testsuites>
+        <testsuite name="Encrypted Sessions ZF2 Test Suite">
+            <directory>tests/EncryptedSessionsZF2/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/EncryptedSessionsZF2/</directory>
+        </whitelist>
+    </filter>
+
+</phpunit>

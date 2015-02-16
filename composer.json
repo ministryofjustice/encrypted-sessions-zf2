@@ -1,0 +1,29 @@
+{
+  "name": "ministryofjustice/encrypted-sessions-zf2",
+  "description": "A decorator for classes implementing ZF2's Session SaveHandlerInterface that enables encryption of the session contents.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ethan Chiddicks",
+      "email": "ethan.chiddicks@transformuk.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "zendframework/zendframework": "2.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "suggest": {
+    "ext-mcrypt": "Required for use of BlockCipher encryption tools."
+  },
+  "autoload" : {
+    "psr-0" : {
+      "EncryptedSessionsZF2\\" : "src/"
+    },
+    "classmap": [
+      "./Module.php"
+    ]
+  }
+}
