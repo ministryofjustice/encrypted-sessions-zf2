@@ -1,6 +1,6 @@
 {
   "name": "ministryofjustice/encrypted-sessions-zf2",
-  "description": "A decorator for classes implementing ZF2's SaveHandlerInterface that encrypts session contents using a block cipher.",
+  "description": "A decorator for classes implementing ZF2's Session SaveHandlerInterface that enables encryption of the session contents.",
   "license": "MIT",
   "authors": [
     {
